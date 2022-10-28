@@ -1,0 +1,12 @@
+{% extends 'bootstrap/base.html' %} {% import "bootstrap/wtf.html" as wtf %} {% block styles %} {{ super() }} {% endblock %} {% block title %}View an Item{% endblock %} {% block content %} {{requested_item.name}}
+
+
+
+<div class="view-item">
+    <img src="{{requested_item.img_url}}" height="400" width="400" alt="" srcset="">
+    <h4>Price: R{{requested_item.price}}</h4>
+    <h4>Sold by {{requested_item.manufacturer}}</h4>
+    <h5>Product ID: {{requested_item.id}}</h5>
+    <h4>See here: <a target="_blank" href="{{requested_item.item_url}}">Click me</a></h4>
+</div>
+{% endblock %}
